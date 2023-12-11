@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Alumni";
+  src: url("/assets/AlumniSans-VariableFont_wght.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Alumni";
+}
+
+body {
+  background-image: url(/img/inscription.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  width: 400px;
+  height: 200px;
+
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  transform: translate(-55%, -55%);
+}
+
+div {
+  display: flex;
+  justify-content: row;
+  width: 100%;
+
+  justify-content: space-between;
+}
+
+div > input {
+  width: 185px;
+}
+
+input {
+  height: 35px;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.submit {
+  background-color: #3a270f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: #221709;
+}
+
+#info {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 5px;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "site_web_mdl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fmt": "npx prettier ./**/* --write --end-of-line=auto"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+    <link rel="stylesheet" href="/css/inscription.css" />
+    <script src="/js/inscription.js" defer async></script>
+  </head>
+  <body>
+    <form>
+      <input
+        placeholder="Prénom"
+        name="firstName"
+        required
+        minlength="2"
+        maxlength="20"
+      />
+      <input
+        placeholder="Nom"
+        name="lastName"
+        required
+        minlength="2"
+        maxlength="20"
+      />
+      <div>
+        <input
+          placeholder="Classe"
+          name="class"
+          required
+          minlength="3"
+          maxlength="6"
+        />
+        <input
+          placeholder="Age"
+          type="number"
+          name="age"
+          required
+          minlength="2"
+          maxlength="2"
+        />
+      </div>
+      <input type="submit" value="S'inscrire" class="submit" name="submit" />
+      <label name="info" id="info">Veuillez renseigner tous les champs</label>
+    </form>
+  </body>
+</html>
