@@ -37,7 +37,7 @@ form.addEventListener("submit", async (event) => {
 
     // On envoie l'utilisateur au serveur
     info.textContent = "Ajout de l'utilisateur ...";
-    const res = await fetch("https://api.mdl.veagle.fr/members", {
+    const res = await fetch("/api/members", {
       method: "POST",
       body: JSON.stringify(userObject),
       headers: {
