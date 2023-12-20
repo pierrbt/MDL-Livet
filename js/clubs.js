@@ -1,30 +1,59 @@
-// On créé une liste avec les différents clubs
 
-// const = let = var
-// clubs c'est une liste qui contient plusieurs "objets" qui contiennent les informations des clubs
+
 const clubs = [
   {
-    nom: "Club Graph",
-    image: "/img/clubs/graph.png", // lien vers l'image
-    // tu peux rajouter d'autres propriétés si tu veux
+    nom: "Club Argentique",
+    image: "img/icon/argentique.svg",
+    description: "Cuisine, vente",
   },
   {
     nom: "Club Numérique",
-    image: "/img/clubs/num.png",
+    image: "img/icon/numérique.svg",
+    description: "Arcade, rétro-découvertes, tournois",
   },
-  // A compléter avec les autres clubs
+  {
+    nom: "Club plante",
+    image: "img/icon/plante.svg",
+    description: "Super descriptio",
+  },
+  {
+    nom: "Club cuisine",
+    image: "img/icon/cuisine.svg",
+    description: "Super descriptio",
+  },
+  {
+    nom: "Club gaming",
+    image: "img/icon/gaming.svg",
+    description: "Super descriptio",
+  },
+  {
+    nom: "Club déco",
+    image: "img/icon/déco.svg",
+    description: "Super descriptio",
+  },
+  {
+    nom: "Club graph",
+    image: "img/icon/graph.svg",
+    description: "Super descriptio",
+  },
+  {
+    nom: "Club musique",
+    image: "img/icon/musique.svg",
+    description: "Super descriptio",
+  },
 ];
 
-// ensuite tu peux sélectionner ton élément html depuis le javascript
+const ul = document.querySelector("ul");
 
-// A FAIRE
 
-// ensuite tu peux dire que le html du conteneur que tu vas utiliser c'est egal au html que tu as généré
-// la fonction map appelle la chaque élément de la liste clubs et l'envoie dans club, qui retourne le html
-// ensuite ça l'assigne au html du conteneur (ça ne marchera pas comme ça il faut le faire)
-
-// A FAIRE
-
-conteneur.innerHTML = clubs.map((club) => {
-  return `<li>${club.nom}</li>`;
-});
+ul.innerHTML = clubs.map((club) => {
+  return `
+  <li>
+    <img src="${club.image}" />
+    <div>
+      <h2>${club.nom}</h1>
+      <span>${club.description}</span>
+    </div>
+  </li>
+  `;
+})
