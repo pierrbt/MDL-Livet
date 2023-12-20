@@ -1,5 +1,3 @@
-
-
 const clubs = [
   {
     nom: "Club Argentique",
@@ -45,7 +43,6 @@ const clubs = [
 
 const ul = document.querySelector("ul");
 
-
 ul.innerHTML = clubs.map((club) => {
   return `
   <li>
@@ -56,4 +53,4 @@ ul.innerHTML = clubs.map((club) => {
     </div>
   </li>
   `;
-})
+});

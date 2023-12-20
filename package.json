@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "fmt": "npx prettier ./**/* --write --end-of-line=auto"
+    "fmt": "npx prettier --write --end-of-line=auto ./**/*.js* ./**/*.css* ./**/*.html*"
   },
   "keywords": [],
   "author": "",
