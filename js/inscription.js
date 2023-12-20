@@ -1,3 +1,35 @@
+const tbody = document.querySelector("tbody");
+
+// On récupère les utilisateurs
+(async () => {
+  try {
+    const req = await fetch("https://api.mdl.veagle.fr/members");
+    if (req.status !== 200)
+      throw new Error(
+        "Erreur lors de la récupération des membres sur le serveur",
+      );
+
+    const res = await req.json();
+    const users = res.data;
+
+    tbody.innerHTML = users
+      .map((user) => {
+        return `
+            <tr>
+                <td>${user.firstName}</td>
+                <td>${user.lastName}</td>
+                <td>${user.class}</td>
+                <td>${user.role}</td>
+            </tr>`;
+      })
+      .join("");
+  } catch (err) {
+    console.error(err);
+    tbody.innerHTML =
+      '<tr><td colspan="5">Erreur lors du chargement des utilisateurs</td></tr>';
+  }
+})();
+
 // Sélecteur form
 const form = document.querySelector("form");
 

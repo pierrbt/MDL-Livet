@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inscription</title>
-    <link rel="stylesheet" href="/css/inscription.css" />
-    <script src="/js/inscription.js" defer async></script>
+    <title>Inscription à la MDL</title>
+    <link rel="stylesheet" href="css/inscription.css" />
+    <link href="css/header.css" rel="stylesheet" />
+    <script src="js/inscription.js" defer async></script>
   </head>
   <body>
+    <h1>Inscription à la MDL</h1>
     <form>
       <input
         placeholder="Prénom"
@@ -41,7 +43,20 @@
         />
       </div>
       <input type="submit" value="S'inscrire" class="submit" name="submit" />
-      <label name="info" id="info">Veuillez renseigner tous les champs</label>
+      <label name="info" id="info">* Veuillez renseigner tous les champs</label>
     </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Prénom</th>
+          <th>Nom</th>
+          <th>Classe</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Généré par le JS -->
+      </tbody>
+    </table>
   </body>
 </html>

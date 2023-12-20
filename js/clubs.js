@@ -43,8 +43,9 @@ const clubs = [
 
 const ul = document.querySelector("ul");
 
-ul.innerHTML = clubs.map((club) => {
-  return `
+ul.innerHTML = clubs
+  .map((club) => {
+    return `
   <li>
     <img src="${club.image}" />
     <div>
@@ -53,4 +54,5 @@ ul.innerHTML = clubs.map((club) => {
     </div>
   </li>
   `;
-});
+  })
+  .join("");
