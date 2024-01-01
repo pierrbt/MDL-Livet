@@ -50,13 +50,13 @@ const ul = document.querySelector("ul");
 
 // On injecte les <li> dans le <ul> avec la méthode map()
 ul.innerHTML = clubs
-  .map((club) => {
+  .map(({ image, nom, description }) => {
     return `
   <li>
-    <img src="${club.image}" />
+    <img src="${image}" />
     <div>
-      <h2>${club.nom}</h1>
-      <span>${club.description}</span>
+      <h2>${nom}</h2>
+      <span>${description}</span>
     </div>
   </li>
   `;
