@@ -1,42 +1,46 @@
+/* conteneur pour les différentes pages */
 div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 500px;
-  width: 85%;
-  margin: 35px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 500px;
+    width: 85%;
+    margin: 35px auto;
 }
 
+/* flexbox et propriétés pour les cases cliquables */
 a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  color: #eee;
-  padding: 20px;
-  text-decoration: none;
-  background: #222;
-  font-size: 38px;
-  border-radius: 5px;
+    color: #eee;
+    padding: 20px;
+    text-decoration: none;
+    background: #222;
+    font-size: 38px;
+    border-radius: 5px;
 
-  transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 a:hover {
-  background: #1e1e1e;
+    background: #1e1e1e;
 }
 
 span {
-  margin: 0 10px;
+    margin: 0 10px;
 }
 
+/* sélecteur pour l'icône seulement */
 span:nth-child(1) {
-  font-size: 38px;
+    font-size: 38px;
 }
 
+/* information venant du js */
 p {
-  color: #eee;
-  font-size: 20px;
-  margin: 50px 0;
-  text-align: center;
+    color: #eee;
+    font-size: 20px;
+    margin: 50px 0;
+    text-align: center;
 }
