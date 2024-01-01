@@ -1,32 +1,32 @@
 /* flexbox pour ordonner les différentes lignes */
 ul {
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-left: 10%;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10%;
 }
 
 /* autre flexbox pour aligner l'image avec le texte */
 li {
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    margin: 10px 0;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 10px 0;
 
-    color: #eee;
+  color: #eee;
 }
 
 img {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 span {
-    font-style: italic;
+  font-style: italic;
 }

@@ -1,101 +1,101 @@
 /* flexbox pour le formulaire */
 form {
-    margin: 50px auto;
-    width: 500px;
-    padding: 20px;
+  margin: 50px auto;
+  width: 500px;
+  padding: 20px;
 
-    background-color: rgba(125, 118, 232, 0.25);
-    border-radius: 8px;
+  background-color: rgba(125, 118, 232, 0.25);
+  border-radius: 8px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 /* tous les inputs normaux */
 input {
-    margin: 10px 0;
-    padding: 10px;
+  margin: 10px 0;
+  padding: 10px;
 
-    background-color: #eee;
-    border: none;
-    border-radius: 5px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
 
-    color: #111;
-    font-size: 20px;
-    font-weight: bold;
+  color: #111;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* la div qui contient classe-age donc plus petit */
 div {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* les input dans cette div spécifique */
 div > input {
-    width: 45%;
+  width: 45%;
 }
 
 /* pour le bouton submit */
 input[type="submit"] {
-    margin: 20px auto;
-    width: 100%;
-    padding: 10px;
+  margin: 20px auto;
+  width: 100%;
+  padding: 10px;
 
-    background-color: #7d76e8;
-    border: none;
-    border-radius: 5px;
+  background-color: #7d76e8;
+  border: none;
+  border-radius: 5px;
 
-    color: #eee;
-    font-size: 20px;
-    font-weight: bold;
+  color: #eee;
+  font-size: 20px;
+  font-weight: bold;
 
-    transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 /* animations de hover et de click sur le bouton */
 input[type="submit"]:hover {
-    background-color: #6c65d9;
+  background-color: #6c65d9;
 }
 
 input[type="submit"]:active {
-    background-color: #5b54ca;
+  background-color: #5b54ca;
 }
 
 label .info {
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: normal;
-    color: #eee;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #eee;
 }
 
 /* tableau générique pour les utilisateurs  */
 
 table {
-    margin: 50px auto;
-    width: 80%;
-    border-collapse: collapse;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: 50px auto;
+  width: 80%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 /* cases du header */
 th {
-    background-color: #7d76e8;
-    color: #eee;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 12px 15px;
-    text-align: center;
+  background-color: #7d76e8;
+  color: #eee;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 15px;
+  text-align: center;
 }
 
 /* cases du tableau */
 td {
-    background-color: #eee;
-    color: #111;
-    font-size: 18px;
-    padding: 12px 15px;
-    text-align: center;
+  background-color: #eee;
+  color: #111;
+  font-size: 18px;
+  padding: 12px 15px;
+  text-align: center;
 }

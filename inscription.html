@@ -1,65 +1,69 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inscription à la MDL</title>
-  <link rel="stylesheet" href="css/inscription.css"/> <!-- feuille de style de la page -->
-  <link href="css/header.css" rel="stylesheet"/> <!-- feuille de style spécifique au header -->
-  <script src="js/inscription.js" defer async></script> <!-- script de la page -->
-</head>
-<body>
-<h1>Inscription à la MDL</h1>
-<form> <!-- formulaire d'inscription -->
-  <!-- on met des attributs pour spécifier les contraintes de chaque entrée -->
-  <input
-      placeholder="Prénom"
-      name="firstName"
-      required
-      minlength="2"
-      maxlength="20"
-  />
-  <input
-      placeholder="Nom"
-      name="lastName"
-      required
-      minlength="2"
-      maxlength="20"
-  />
-  <div>
-    <input
-        placeholder="Classe"
-        name="class"
-        required
-        minlength="3"
-        maxlength="6"
-    />
-    <input
-        placeholder="Age"
-        type="number"
-        name="age"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription à la MDL</title>
+    <link rel="stylesheet" href="css/inscription.css" />
+    <!-- feuille de style de la page -->
+    <link href="css/header.css" rel="stylesheet" />
+    <!-- feuille de style spécifique au header -->
+    <script src="js/inscription.js" defer async></script>
+    <!-- script de la page -->
+  </head>
+  <body>
+    <h1>Inscription à la MDL</h1>
+    <form>
+      <!-- formulaire d'inscription -->
+      <!-- on met des attributs pour spécifier les contraintes de chaque entrée -->
+      <input
+        placeholder="Prénom"
+        name="firstName"
         required
         minlength="2"
-        maxlength="2"
-    />
-  </div>
-  <input type="submit" value="S'inscrire" class="submit" name="submit"/>
+        maxlength="20"
+      />
+      <input
+        placeholder="Nom"
+        name="lastName"
+        required
+        minlength="2"
+        maxlength="20"
+      />
+      <div>
+        <input
+          placeholder="Classe"
+          name="class"
+          required
+          minlength="3"
+          maxlength="6"
+        />
+        <input
+          placeholder="Age"
+          type="number"
+          name="age"
+          required
+          minlength="2"
+          maxlength="2"
+        />
+      </div>
+      <input type="submit" value="S'inscrire" class="submit" name="submit" />
 
-  <!-- on met un label pour afficher les éventuelles erreurs du serveur -->
-  <label name="info" id="info">* Veuillez renseigner tous les champs</label>
-</form>
-<table>
-  <thead>
-  <tr>
-    <th>Prénom</th>
-    <th>Nom</th>
-    <th>Classe</th>
-    <th>Role</th>
-  </tr>
-  </thead>
-  <tbody>
-  <!-- généré par le JS -->
-  </tbody>
-</table>
-</body>
+      <!-- on met un label pour afficher les éventuelles erreurs du serveur -->
+      <label name="info" id="info">* Veuillez renseigner tous les champs</label>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Prénom</th>
+          <th>Nom</th>
+          <th>Classe</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- généré par le JS -->
+      </tbody>
+    </table>
+  </body>
 </html>
