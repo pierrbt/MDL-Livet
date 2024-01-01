@@ -14,6 +14,14 @@ async function fetchUsers() {
       );
     // On récupère le JSON
     const res = await req.json();
+    /**
+     * Contient les informations des utilisateurs
+     * @type {[]} users
+     * @property {string} firstName
+     * @property {string} lastName
+     * @property {string} class
+     * @property {string} role
+     */
     const users = res.data;
 
     // On map chaque utilisateur pour créer une ligne du tableau
