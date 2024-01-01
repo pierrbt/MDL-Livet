@@ -1,12 +1,10 @@
 {
   "name": "site_web_mdl",
-  "version": "1.1.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.2.0",
+  "description": "Le site web de la MDL du lycée Livet",
   "scripts": {
     "fmt": "npx prettier --write --end-of-line=auto ./**/*.js* ./**/*.css* ./**/*.html*"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "pierrbt",
+  "license": "MIT"
 }
