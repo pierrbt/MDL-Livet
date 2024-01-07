@@ -6,7 +6,7 @@ async function fetchUsers() {
   // On utilise une fonction asynchrone pour pouvoir utiliser await
   try {
     // On récupère les utilisateurs depuis le serveur
-    const req = await fetch("https://api.mdl.veagle.fr/members");
+    const req = await fetch("/api/members");
     // On vérifie que la requête s'est bien passée
     if (req.status !== 200)
       throw new Error(
@@ -23,7 +23,7 @@ async function fetchUsers() {
      * @property {string} role
      */
     const users = res.data;
-
+    
     // On map chaque utilisateur pour créer une ligne du tableau
     tbody.innerHTML = users
       .map((user) => {
@@ -52,20 +52,20 @@ const form = document.querySelector("form");
 // On gère le onsubmit (addEventListener est plus propre que l'attribut onsubmit)
 form.addEventListener("submit", async (event) => {
   event.preventDefault(); // On empêche le rechargement de la page
-
+  
   // On récupère les élements irrécupérables depuis event
   const info = document.querySelector("#info");
   const submit = document.querySelector(".submit");
-
+  
   // On désactive le bouton submit pour le moment
   submit.disabled = true;
-
+  
   // On définit toutes les entrées du formulaire
   const inputs = ["firstName", "lastName", "class", "age"];
-
+  
   // On créé l'objet utilisateur par défaut
-  const userObject = { role: "Membre" };
-
+  const userObject = {role: "Membre"};
+  
   for (const input of inputs) {
     // On vérifie la validité de l'entrée avec les paramètres dans l'HTML
     const element = event.currentTarget[input];
@@ -73,7 +73,7 @@ form.addEventListener("submit", async (event) => {
       info.textContent = "Une des entrées est invalide !";
       return false;
     }
-
+    
     // On récupère la valeur
     const value = element.value;
     userObject[input] = value;
@@ -82,10 +82,10 @@ form.addEventListener("submit", async (event) => {
   try {
     // Conversion en Number pour l'age
     userObject.age = Number(userObject.age);
-
+    
     // On envoie l'utilisateur au serveur
     info.textContent = "Ajout de l'utilisateur ...";
-    const res = await fetch("https://api.mdl.veagle.fr/members", {
+    const res = await fetch("/api/members", {
       method: "POST",
       body: JSON.stringify(userObject),
       headers: {
@@ -93,16 +93,16 @@ form.addEventListener("submit", async (event) => {
         "Content-Type": "application/json",
       },
     });
-
+    
     // On gère une éventuelle erreur du serveur
     if (res.status !== 200) {
       throw new Error("Impossible de créer l'utilisateur");
     }
-
+    
     await res.json(); // On vérifie que la réponse est bien du JSON
-
+    
     info.textContent = "Utilisateur créé avec succès";
-
+    
     fetchUsers(); // On recharge les utilisateurs
   } catch (err) {
     console.error(err);
@@ -111,6 +111,6 @@ form.addEventListener("submit", async (event) => {
     submit.disabled = false;
     return;
   }
-
+  
   return true;
 });
